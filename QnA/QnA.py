@@ -1,13 +1,12 @@
 import os
 import openai
 
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "Your Open AI API Key"
 openai.api_key = os.getenv("OPENAI_API_KEY")
-#openai.api_key = "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"
 
 response = openai.Completion.create(
   model="text-davinci-003",
-  prompt="Q: Who is Sachin Tendulkar?\nA:",
+  prompt="Q: who is elon musk?\n A:",
   temperature=0,
   max_tokens=100,
   top_p=1,
@@ -16,4 +15,5 @@ response = openai.Completion.create(
   stop=["\n"]
 )
 
-print(response)
+#print(response)
+print(response['choices'][0]['text'])

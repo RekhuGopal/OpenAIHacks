@@ -1,9 +1,8 @@
 import os
 import openai
 
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "Your Open AI API Key"
 openai.api_key = os.getenv("OPENAI_API_KEY")
-#openai.api_key = "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"
 
 response = openai.Image.create_edit(
   image=open("sunlit_lounge.png", "rb"),
